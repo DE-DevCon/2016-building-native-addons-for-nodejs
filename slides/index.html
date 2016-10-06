@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Creating Native Addons for Node.js</h1>
+				</section>
+				<section>
+					Hello! My name is Quentin.
+				</section>
+				<section>
+					<h2>A little about me</h2>
+					<ul>
+						<li>DE Employee for 1.5 years</li>
+						<li>PHP web developer for TraderOnline.com</li>
+						<li>Interested in lifting the hood on various technologies.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Eww C++</h2>
+					<ul>
+						<li>Indeed.com job posting trends shows a 31% decline in C++ from 2012</li>
+						<li>Node.js had a 1,182% increase in job postings</li>
+						<li>Not built for web development</li>
+						<li>Many devs don't touch it again after leaving school</li>
+					</ul>
+				</section>
+				<section>
+					<h2>C/C++ use in other languages</h2>
+					<ul>
+						<li>PHP's interepreter => written in C</li>
+						<li>Oracle's Java Virtual Machine => written in C++</li>
+						<li>Ruby interpreter => written in C</li>
+						<li>Python interpreter => written in C</li>
+						<li>Node.js => written in C++</li>
+					</ul>
+				</section>
+				<section>
+					<h2>The C++/Node Alliance</h2>
+				</section>
+				<section>
+					<img style="background-color: white;" src="images/v8-logo.png">
+				</section>
+				<section>
+					Node.js is founded on top of Google's V8 JavaScript engine.
+				</section>
+				<section>
+					Creating C++ addons for Node will also teach you about how V8 works.
+				</section>
+				<section>
+					<h2>Setting up your tools</h2>
+					https://github.com/nodejs/node-gyp
+				</section>
+				<section>
+					<h2>Let's get started!</h2>
+					<img src="images/cat-typing.gif">
+				</section>
+				<section>
+					<h2>Lesson 1 (Hello World)</h2>
+					http://bit.ly/2dAqeWR
+				</section>
+				<section>
+					<h2>Lesson 2 (Passing Arguments)</h2>
+					http://bit.ly/2duSbRg
+				</section>
+				<section>
+					<h2>Lesson 3 (Callbacks and Async)</h2>
+					http://bit.ly/2dMVPTw
+				</section>
+				<section>
+					<h2>Useful Links</h2>
+					<ul>
+						<li>http://v8.paulfryzel.com/docs/master</li>
+						<li>https://nodejs.org/api/addons.html</li>
+						<li>http://docs.libuv.org/en/v1.x/</li>
+					</ul>
+				</section>					
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
