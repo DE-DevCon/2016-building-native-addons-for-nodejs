@@ -53,7 +53,11 @@ namespace node_cpp_tutorial {
     }
 
     uint32_t sleepTime = args[0]->ToUint32()->Value();
+#ifdef _WIN32
     Sleep(sleepTime);
+#else
+    usleep(sleepTime * 1000);
+#endif
 
     // Fire the callback function that was provided. Pass the callback the total
     // time we have slept.
@@ -63,7 +67,11 @@ namespace node_cpp_tutorial {
 
   void SleepAsync(uv_work_t* request) {
       WorkInfo* info = static_cast<WorkInfo*>(request->data);
+#ifdef _WIN32
       Sleep(info->sleepTime);
+#else
+      usleep(info->sleepTime * 1000);
+#endif
   }
 
   void SleepAsyncComplete(uv_work_t* request, int status) {
