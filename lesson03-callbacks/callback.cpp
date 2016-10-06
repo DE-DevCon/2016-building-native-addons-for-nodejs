@@ -2,7 +2,12 @@
 // Node and the V8 runtime as well as registration functions.
 #include <node.h>
 #include <uv.h>
+
+#ifdef _WIN32
 #include <windows.h>
+#else
+#include <unistd.h>
+#endif
 
 namespace node_cpp_tutorial {
   // Typing v8 in front of everything takes up a lot of extra space. We
